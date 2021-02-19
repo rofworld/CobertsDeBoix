@@ -1,0 +1,39 @@
+
+
+.form-control{
+  border-color: var(--color-blue);
+  width:70%;
+  left:15%;
+  right: 15%;
+  height: 40px;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+.btn-submit{
+  width:70%;
+  left:15%;
+  right: 15%;
+  height: 40px;
+  margin-top: 20px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border-radius: 25px;
+  border-color: var(--color-blue);
+  outline:none;
+}
+
+.invalid-feedback{
+  color: var(--color-red);
+  width:70%;
+  margin-left:15%;
+  right: 15%;
+
+}
+
+.forgot-password{
+
+
+  margin-left:15%;
+  margin-top: 10px;
+
+}

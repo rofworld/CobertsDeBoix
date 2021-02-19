@@ -1,0 +1,146 @@
+body{
+  background-color: var(--color-boix-soft);
+}
+#page-nav{
+
+  border-top: 1px solid var(--color-boix-dark);
+  border-bottom: 1px solid var(--color-boix-dark);
+  background-color: var(--color-boix);
+
+}
+
+#site-nav{
+
+  border-top: 1px solid var(--color-boix-dark);
+  border-bottom: 1px solid var(--color-boix-dark);
+  background-color: var(--color-boix);
+
+}
+
+#site-nav a{
+  color: var(--color-white);
+}
+
+#page-nav a{
+  color: var(--color-white);
+}
+button{
+  background-color: var(--color-boix);
+  color:var(--color-white);
+  border: 0px !important;
+}
+
+
+
+
+.site-logo{
+  font-size: 30px;
+  font-family: Cursive;
+}
+
+#author{
+  font-size: 30px;
+  font-family: Yesteryear;
+}
+
+.footer_label{
+  font-size: 40px;
+  font-family: Cursive;
+}
+
+.image-logo{
+  margin:-5px 10px;
+}
+
+.container {
+    margin-left: 50px;
+    text-align: justify;
+    color: var(--color-boix-dark);
+}
+
+.gallery article h3{
+  font-size: 20px;
+}
+
+
+label {
+    font-weight: 600;
+}
+
+form{
+  padding: 10px;
+}
+
+.form-group{
+  padding:10px;
+}
+
+#page-footer {
+    width: 100%;
+    height:220px;
+    background:  var(--color-hardgrey);
+    color: var(--color-white);
+    text-align: center;
+  }
+
+
+.icons{
+  margin-top: 5px;
+  width:50px;
+  height:50px;
+}
+
+
+
+.error {
+    color: red;
+    font-weight: 400;
+    display: block;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.form-control.error {
+    border-color: red;
+    padding: .375rem .75rem;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-success {
+    color: var(--color-white);
+    background-color: var(--color-boix);
+    border: 0px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.btn-block{
+  margin-top: 10px;
+  width: 100%;
+}
+
+.button-dark:hover{
+  background-color: black;
+  color:white;
+}
+
+.pull-right{
+  float: right;
+}

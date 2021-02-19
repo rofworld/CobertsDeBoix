@@ -1,0 +1,41 @@
+.artist{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid;
+}
+
+.artist_image{
+  width:100%;
+  height: auto;
+}
+
+
+.artist_description{
+  font-family: sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+.artist_name{
+  font-family: sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.artist_admin_buttons{
+  float: right;
+  margin-top: 20px;
+}
+
+.links_title{
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+
+}

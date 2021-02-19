@@ -1,0 +1,24 @@
+section header{
+  border-bottom: 0px;
+}
+
+section footer{
+  border-top: 0px;
+}
+
+.panel{
+  border: 0px;
+}
+
+
+.addToCartButton,.viewCartButton{
+  width: 100%;
+  background-color: var(--color-boix);
+  color:var(--color-white);
+}
+
+.plus_button{
+
+  text-align: center;
+
+}

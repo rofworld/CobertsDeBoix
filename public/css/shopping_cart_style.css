@@ -1,0 +1,20 @@
+
+#checkoutButton{
+  width: 100%;
+  background-color: var(--color-boix);
+  color:var(--color-white);
+}
+
+.total_price{
+  color: var(--color-boix-soft);
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+
+.shopping_cart_table{
+  background-color: var(--color-boix-soft);
+  color:var(--color-boix-dark);
+}
