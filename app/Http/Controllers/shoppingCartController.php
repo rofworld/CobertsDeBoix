@@ -61,7 +61,7 @@ class shoppingCartController extends Controller
         $shoppingCart = shoppingCart::where('id',$id)->get();
         if (!$shoppingCart->isEmpty() && $shoppingCart[0]->user_id == Auth::user()->id){
           $shoppingCartLines = Shopping_Cart_Line::where('shopping_cart_id',$id)->get();
-          $total_price = $shoppingCartLines->sum('total_line_price');
+          $total_price = $shoppingCartLines->sum('total_line_price') + env('GASTOS_ENVIO');
           return view('shopping_cart')
           ->with('shoppingCartLines',$shoppingCartLines)
           ->with('total_price',$total_price);
@@ -133,6 +133,24 @@ class shoppingCartController extends Controller
     }else{
       return "NOLIN";
     }
+
+  }
+  public function deleteItem(Request $request){
+
+    foreach ($request->input('itemsArray') as $itemId) {
+
+      $shoppingCartId = Shopping_Cart_Line::find($itemId)->shopping_cart_id;
+      Shopping_Cart_Line::destroy($itemId);
+
+    }
+    if ($request->input('all')==1) {
+      shoppingCart::destroy($shoppingCartId);
+      return "ALL";
+    }
+
+
+    return "success";
+
 
   }
 }

@@ -98,9 +98,9 @@
     <div class="footer_label">
       <label>Siguenos en: </label>
     </div>
-    
+
       <a href="http://facebook.com"><img src="/images/logo_facebook.png" alt="Facebook" class="icons" ></a>
-      <a href="www.instagram.com"><img src="/images/icono_instagram.png" alt="Instagram" class="icons"></a>
+      <a href="http://www.instagram.com"><img src="/images/icono_instagram.png" alt="Instagram" class="icons"></a>
 
     <div id="author">
       <label>Creada por Ricardo Belmonte</label>

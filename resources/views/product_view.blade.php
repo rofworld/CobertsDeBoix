@@ -20,6 +20,10 @@
     	<section class="panel"><p>{{$product->description}}</p></section>
     </div>
 	</div>
+  <div id="GastosDeEnvio">
+    <p>Los envios se hacen por toda España. Los gastos de envio son {{env('GASTOS_ENVIO')}} €.
+    El plazo de entrega son 15 dias naturales.</p>
+  </div>
   <footer>
     <div class="form-group form-group-stock">
       <em><button class="plus_button" id ="less_button" title="Stock unit control" >-</button></em>

@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 <head>
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/style_payment.css') }}"/>
+  @if ((new \Jenssegers\Agent\Agent())->isDesktop())
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style_payment.css') }}"/>
+  @else
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style_payment_mobile.css') }}"/>
+  @endif
   <script src="https://js.stripe.com/v2/"></script>
 </head>
 

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
@@ -50,6 +50,7 @@ Route::get('/onlineShop',[App\Http\Controllers\shoppingCartController::class,'vi
 Route::get('/product_view/{id}',[App\Http\Controllers\shoppingCartController::class,'viewProduct']);
 Route::post('/product_view/addToCart',[App\Http\Controllers\shoppingCartController::class,'addToCart']);
 Route::get('/shoppingCart/{id}',[App\Http\Controllers\shoppingCartController::class,'viewCart']);
+Route::post('/shoppingCart/delete',[App\Http\Controllers\shoppingCartController::class,'deleteItem']);
 
 
 Route::get('/checkout/{id}',[App\Http\Controllers\PaymentController::class,'paymentDetails'] );
@@ -57,5 +58,5 @@ Route::post('/checkout/pay',[App\Http\Controllers\PaymentController::class,'pay'
 
 
 Route::get('/list_orders',[App\Http\Controllers\OrderController::class,'list'] );
-Route::post('list_orders/markAsSent',[App\Http\Controllers\OrderController::class,'markAsSent'] );
+Route::post('/list_orders/markAsSent',[App\Http\Controllers\OrderController::class,'markAsSent'] );
 Route::get('/orders/view/{id}',[App\Http\Controllers\OrderController::class,'viewOrder'] );

@@ -31,7 +31,7 @@
      </tbody>
     </table>
     <label style="font-size: 24px; font-weight:bold;">Datos de envio</label>
-    <div style="margin-top: 20px; border:1px solid  var(--color-blue); padding:20px;">
+    <div style="margin-top: 20px; border:1px solid  var(--color-boix-dark); padding:20px;">
       <div>
         <label><strong>Nombre Completo: </strong></label>
 

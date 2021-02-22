@@ -23,7 +23,7 @@ class PaymentController extends Controller
 
       $shoppingCartLines = Shopping_Cart_Line::where('shopping_cart_id',$id)->get();
 
-      $total_price = $shoppingCartLines->sum('total_line_price');
+      $total_price = $shoppingCartLines->sum('total_line_price') + env('GASTOS_ENVIO');
 
       return view('paymentDetails')
       ->with('shoppingCartId',$id)

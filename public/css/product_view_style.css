@@ -22,3 +22,12 @@ section footer{
   text-align: center;
 
 }
+
+
+#GastosDeEnvio{
+  color:var(--color-boix);
+  padding:25px;
+  margin:10px 10px 10px 10px;
+  width: 100%;
+  border: 1px solid var(--color-boix-dark);
+}

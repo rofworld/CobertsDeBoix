@@ -1,5 +1,13 @@
 
 #checkoutButton{
+  margin-top: 10px;
+  width: 100%;
+  background-color: var(--color-boix);
+  color:var(--color-white);
+}
+
+#deleteButton{
+  margin-top: 10px;
   width: 100%;
   background-color: var(--color-boix);
   color:var(--color-white);

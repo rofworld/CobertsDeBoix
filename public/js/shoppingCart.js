@@ -1,14 +1,22 @@
-$('#markAsSentButton').click(function () {
+$('#deleteButton').click(function () {
   /* find id */
+
+  var numberOfChecked = $('.deleteCheck:checked').length;
+  var totalCheckboxes = $('.deleteCheck').length;
+  var all=0;
+  if (numberOfChecked == totalCheckboxes){
+    all= 1;
+  }
   var checked = []
-  $(".sentCheck:checked").each(function ()
+  $(".deleteCheck:checked").each(function ()
   {
       checked.push(parseInt($(this).val()));
   });
 
   console.log(checked);
   var params = {
-    ordersArray: checked
+    all: all,
+    itemsArray: checked
   };
   $.ajaxSetup({
     headers: {
@@ -16,7 +24,7 @@ $('#markAsSentButton').click(function () {
     }
   });
   request = $.ajax({
-    url: "/list_orders/markAsSent",
+    url: "/shoppingCart/delete",
     type: "POST",
     data: params
   }); // Callback handler that will be called on success
@@ -24,9 +32,9 @@ $('#markAsSentButton').click(function () {
   request.done(function (response, textStatus, jqXHR) {
     // Log a message to the console
     //console.log(response);
-    //console.log(textStatus); //push array
+    //console.log(textStatus); //push arra
+    location.reload();
 
-      location.reload();
 
   });
   request.fail(function (jqXHR, textStatus, errorThrown) {

@@ -17,7 +17,7 @@
       var cvc = $('#cvc').val();
       var expiry_month = $('#expiry_month').val();
       var expiry_year = $('#expiry_year').val();
-      Stripe.setPublishableKey("pk_test_51IGkTPAy4FlKjV1rR8rdRHaAxJsSSPprkfsJuByNTPqIXwsh14QQW4FfZ6ftiXiNeCcvz2KC3P4Hoj4SnXGnPtyg002DjH39FE");
+      Stripe.setPublishableKey("pk_test_51IMHwrCxHijM4K66s7lRb1tHoL9NBRIkJ55UCDinQk5MInOpM8c39RmvpW5DqCVnNU8acpcsOiCVFTIJ9uUhQENV00i14JSKoo");
       Stripe.card.createToken({
           number: ccn,
           cvc: cvc,

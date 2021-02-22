@@ -1,7 +1,7 @@
 
 
 .form-control{
-  border-color: var(--color-blue);
+  border-color: var(--color-boix);
   width:70%;
   left:15%;
   right: 15%;
@@ -15,10 +15,10 @@
   right: 15%;
   height: 40px;
   margin-top: 20px;
-  background-color: var(--color-blue);
+  background-color: var(--color-boix);
   color: var(--color-white);
   border-radius: 25px;
-  border-color: var(--color-blue);
+  border-color: var(--color-boix-dark);
   outline:none;
 }
 
