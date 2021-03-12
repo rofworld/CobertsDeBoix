@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class ProductAdminController extends Controller
 {
   public function createForm(Request $request) {
-    if (Auth::user()->admin==true){
+    if (Auth::check() && Auth::user()->admin==true){
       return view('product_creation');
     }else{
       return "Not allowed";
@@ -19,7 +19,7 @@ class ProductAdminController extends Controller
 
 
   public function editForm($id) {
-    if (Auth::user()->admin==true){
+    if (Auth::check() && Auth::user()->admin==true){
       $product=Product::where('id', $id)->first();
       return view('product_edit')
       ->with('product',$product);
@@ -103,15 +103,21 @@ class ProductAdminController extends Controller
 
   public function listProducts(Request $request){
 
-    $products = Product::all();
+    if (Auth::check() && Auth::user()->admin==true){
+
+      $products = Product::all();
 
 
-    return view('product_list')
-    ->with('product_list',$products);
+      return view('product_list')
+      ->with('product_list',$products);
+
+    }else{
+      return "Not allowed";
+    }
   }
 
   public function delete($id){
-    if (Auth::user()->admin==true){
+    if (Auth::check() && Auth::user()->admin==true){
       Product::destroy($id);
       return back()->with('success', 'You have successfully deleted a Product');
     }else{
@@ -120,7 +126,7 @@ class ProductAdminController extends Controller
   }
 
   public function hide($id){
-    if (Auth::user()->admin==true){
+    if (Auth::check() && Auth::user()->admin==true){
       $product = Product::find($id);
       $hidden = $product->hidden ? false : true;
       $product->update([

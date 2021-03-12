@@ -40,29 +40,29 @@
       <strong><label for="mobnav"><span class="symbol-list"></span><mark></mark></label></strong>
       <div hidden>
       <a class="site-logo" href="{{ url('/home')}}" title="Coberts de Boix">
-        <img src="/images/logo.jpg" alt="Lemon Hill Logo" class="image-logo"><b>Coberts de Boix</b>
+        <img src="/images/logo.jpg" alt="Lemon Hill Logo" class="image-logo"><b>Utils Boix</b>
       </a>
-      <a href="{{ url('/home')}}" title="Home" style="margin-left:275px;">Home</a>
-      <a href="{{ url('/onlineShop')}}" title="Online Shop">Online Shop</a>
+      <a href="{{ url('/home')}}" title="Home" style="margin-left:275px;">Inicio</a>
+      <a href="{{ url('/onlineShop')}}" title="Online Shop">Tienda Online</a>
       @guest
 
 
 
             @if (Route::has('login'))
 
-            <a href="{{ route('login') }}">{{ __('Login') }}</a>
+            <a href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
 
             @endif
 
             @if (Route::has('register'))
 
-            <a href="{{ route('register') }}">{{ __('Register') }}</a>
+            <a href="{{ route('register') }}">{{ __('Registro') }}</a>
 
             @endif
 
         @else
             <a href="{{ route('logout') }}"  onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></li>
+                                               document.getElementById('logout-form').submit();">{{ __('Cerrar Sesión') }}</a></li>
                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                                     @csrf
                                                 </form>
@@ -81,9 +81,9 @@
       <hr>
       <nav id="page-nav" class="nav-scroll">
       <div>
-        <a href="/product_list_admin" title="Product List">Product List</a>
-        <a href="/product_creation_form" title="Create Product">Create Product</a>
-        <a href="/list_orders" title="Orders">Orders</a>
+        <a href="/product_list_admin" title="Product List">Lista de productos</a>
+        <a href="/product_creation_form" title="Create Product">Crear Producto</a>
+        <a href="/list_orders" title="Orders">Pedidos</a>
        </div>
        </nav>
        <hr>

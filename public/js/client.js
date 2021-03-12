@@ -74,7 +74,7 @@
                   console.log(response);
                   console.log(textStatus); //push array
                   console.log("Payment Done");
-                  $('#status').append('<div class="alert alert-danger">' + "No Shopping Cart" + '</div>');
+                  $('#status').append('<div class="alert alert-danger">' + "Carrito inexistante" + '</div>');
                   window.scrollTo(0,0);
 
                 }else{
@@ -82,14 +82,14 @@
                   console.log(response);
                   console.log(textStatus); //push array
                   console.log("Payment Done");
-                  $('#status').append('<div class="alert alert-success">' + "Payment Done" + '</div>');
+                  $('#status').append('<div class="alert alert-success">' + "Pago correcto" + '</div>');
                   window.scrollTo(0,0);
               }
               });
               request.fail(function (jqXHR, textStatus, errorThrown) {
                 // Log the error to the console
                 console.error("The following error occurred: " + textStatus, errorThrown);
-                $('#status').append('<div class="alert alert-danger">' + "Error during payment" + '</div>');
+                $('#status').append('<div class="alert alert-danger">' + "Error durante el pago" + '</div>');
                 window.scrollTo(0,0);
               });
 

@@ -8,46 +8,33 @@
 
 <div class="container">
 
-
-
-    <h3><u>Shopping Cart</u></h3>
-    <table class="shopping_cart_table">
-       ​<thead>
-      	<tr>
-          <th>Select</th>
-      	  <th>Product</th>
-          @if ((new \Jenssegers\Agent\Agent())->isDesktop())
-      	  <th>Unit Price</th>
-      	  <th>Quantity</th>
-      	  <th>Line Price</th>
-          @endif
-      	</tr>
-       ​</thead>
-       ​<tbody>
+        <div class="table">
        @foreach ($shoppingCartLines as $line)
 
-       <tr>
-         <td>
-           <input id="checkbox-{{$line->id}}" class="deleteCheck" name="some" type="checkbox" value="{{$line->id}}">
-         </td>
-         <td>{{$line->product_name}}</td>
-         @if ((new \Jenssegers\Agent\Agent())->isDesktop())
-         <td>{{$line->unit_price}}</td>
-         <td>{{$line->units}}</td>
-         <td>{{$line->total_line_price}}</td>
-         @endif
-       </tr>
+      <article>
+        <h3>{{$line->product_name}} X {{$line->units}} </h3>
+        <strong>{{$map_description[$line->id]}}. Precio: {{$line->unit_price}} X {{$line->units}} = {{$line->total_line_price}} € </strong>
+        <div><img src="/storage/{{ $map_images[$line->id]}}" alt="{{$line->product_name}}"></div>
+      </article>
+
        @endforeach
-     </tbody>
-    </table>
+     </div>
+
+    <div class="sub-total-price">
+      <label style="font-size:24px; font-weight: bold; font-family: Courier" >SubTotal: {{$subtotal_price}} €</label>
     </div>
-    <div>
-      <label class="total_price pull-right">Total price: {{$total_price}} €</label>
+
+    <div class="gastos-envio">
+      <label style="font-size:24px; font-weight: bold; font-family: Courier" >Gastos de envio: {{env('GASTOS_ENVIO')}} €</label>
+    </div>
+
+    <div class="total-price">
+      <label style="font-size:35px; font-weight: bold; font-family: Courier">Total: {{$subtotal_price + env('GASTOS_ENVIO') }} €</label>
     </div>
     <hr>
     <div>
-      <em><a id="deleteButton" title="Delete Button">Delete Item</a></em>
-  		<em><a id="checkoutButton" title="Checkout Button" href="{{ url('/checkout/'.$line->shopping_cart_id)}}">Checkout ({{ $total_price }} €)</a></em>
+
+  		<em><a id="checkoutButton" title="Checkout Button" href="{{ url('/checkout/'.$line->shopping_cart_id)}}">Comprar ({{ $subtotal_price + env('GASTOS_ENVIO') }} €)</a></em>
 
     </div>
     <script src="{{ asset('js/shoppingCart.js') }}" type="text/javascript"></script>

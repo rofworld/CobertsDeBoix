@@ -32,11 +32,11 @@
       <label hidden id="product_id">{{ $product->id }}</label>
     </div>
     <div class="form-group">
-  		<em><button id="addToCartButton" title="Add to Cart Button" class="addToCartButton">Add to Cart</button></em>
+  		<em><button id="addToCartButton" title="Add to Cart Button" class="addToCartButton">Añadir al carrito</button></em>
     </div>
     @if (Auth::check() && !$shoppingCarts->isEmpty())
       <div class="form-group">
-    		<em><a class="viewCartButton" href="{{ url('/shoppingCart/'.$shoppingCarts[0]->id)}}">View Shopping Cart ( {{$total_products}} )</a></em>
+    		<em><a class="viewCartButton" href="{{ url('/shoppingCart/'.$shoppingCarts[0]->id)}}">Ir al carrito ( {{$total_products}} )</a></em>
       </div>
     @endif
   <script src="{{ asset('js/product_view_logic.js') }}" type="text/javascript"></script>

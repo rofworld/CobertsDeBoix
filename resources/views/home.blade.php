@@ -4,7 +4,7 @@
 </head>
 @section('content')
 
-    <img src="/images/portada.jpg" alt="Portada"></img>
+    <img src="/images/portada_boix_temporal.jpg" id="portada" alt="Portada"></img>
     <div class="container">
       <div>
         <div class="flex-grid-2">

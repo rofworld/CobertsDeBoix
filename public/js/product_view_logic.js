@@ -37,10 +37,10 @@ $('#addToCartButton').click(function () {
     //console.log(response);
     //console.log(textStatus); //push array
     if (response =="NOSTOCK"){
-      $('#status').append('<div class="alert alert-warning">' + "Not enough stock" + '</div>');
+      $('#status').append('<div class="alert alert-warning">' + "No hay suficiente stock" + '</div>');
       window.scrollTo(0,0);
     }else if (response =="NOLIN") {
-      $('#status').append('<div class="alert alert-warning">' + "Not Logged In. Please Log in or Register" + '</div>');
+      $('#status').append('<div class="alert alert-warning">' + "Inicie sesión o registrese" + '</div>');
       window.scrollTo(0,0);
     }else{
       location.reload();
@@ -49,6 +49,6 @@ $('#addToCartButton').click(function () {
   });
   request.fail(function (jqXHR, textStatus, errorThrown) {
     // Log the error to the console
-    console.error("The following error occurred: " + textStatus, errorThrown);
+    console.error("Error: " + textStatus, errorThrown);
   });
 });

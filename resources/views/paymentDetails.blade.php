@@ -15,7 +15,7 @@
 <div class="container">
 <div id="status">
 </div>
-  <h3 style="margin-left:15%;"><u>Payment Details</u></h3>
+  <h3 style="margin-left:15%;"><u>Datos de pago</u></h3>
   <div class="payment-details">
                         <input id="shoppingCartId" type="text" value="{{$shoppingCartId}}" hidden>
                         <input id="total_price" type="text" value="{{$total_price}}" hidden>
@@ -23,7 +23,7 @@
                         <div id="form-send-data">
                         <div class="form-group">
                           <div>
-                                <label for="name" class="form-control">{{ __('Nombre Completo') }}</label>
+                                <label for="name" class="form-control">{{ __('Nombre y Apellidos') }}</label>
                           </div>
                           <div>
                                 <input id="send_name" type="text" class="form-control" required>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="form-group">
                               <div>
-                                <label for="city" class="form-control">{{ __('Ciudad') }}</label>
+                                <label for="city" class="form-control">{{ __('Municipio') }}</label>
                               </div>
                               <div>
                                 <input id="city" type="text" class="form-control" required>
@@ -88,7 +88,7 @@
                       <div id="form-payment-data">
                         <div class="form-group">
                           <div>
-                          <label for="ccn" class="form-control">Credit Card Number:</label>
+                          <label for="ccn" class="form-control">Numero de tarjeta:</label>
                           </div>
                           <div>
                           <input id="ccn" class="form-control-ccn" type="text" maxlength="19" placeholder="xxxxxxxxxxxxxxxx" required>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-group">
                           <div>
-                          <label for="expiry_month" class="form-control">{{ __('Expiry Month') }}</label>
+                          <label for="expiry_month" class="form-control">{{ __('Mes de caducidad') }}</label>
                           </div>
                           <div>
                           <input id="expiry_month" class="form-control-expiry-month" type="text" required>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="form-group">
                           <div>
-                          <label for="expiry_year" class="form-control">{{ __('Expiry Year') }}</label>
+                          <label for="expiry_year" class="form-control">{{ __('Año de caducidad') }}</label>
                           </div>
                           <div>
                           <input id="expiry_year" class="form-control-expiry-year" type="text" required>
@@ -120,7 +120,7 @@
                         </div>
                       </div>
                       <em><button id="btn-submit" class="btn-submit">
-                                    Pay ( {{$total_price}} € )
+                                    Pagar ( {{$total_price}} € )
                       </button></em>
 
   <script src="{{ asset('js/client.js') }}" type="text/javascript"></script>
