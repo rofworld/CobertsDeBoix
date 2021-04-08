@@ -7,11 +7,26 @@
 }
 
 #form-payment-data{
+  margin-bottom: 20px;
   margin-top: 20px;
   padding: 20px;
   border: 1px solid var(--color-boix);
   width:100%;
 
+}
+
+#info-contra-rembolso{
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid var(--color-boix);
+
+}
+
+#form-politica-privacidad{
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--color-boix);
+  width :100%;
 }
 .form-control{
   border-color: var(--color-boix);

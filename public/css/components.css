@@ -9,7 +9,7 @@
 /* ------------------------------------------------------------ Animation Keyframes */
 
 /* FadeIn */
-
+/*
 @-webkit-keyframes fadeIn {
 	from { opacity: 0; }
 }
@@ -22,8 +22,9 @@
 @keyframes fadeIn {
 	from { opacity: 0; }
 }
-
+*/
 /* FadeOut */
+
 
 @-webkit-keyframes fadeOut {
 	to { opacity: 0; }

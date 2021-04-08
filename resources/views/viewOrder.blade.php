@@ -63,7 +63,7 @@
         <label>{{$country}}</label>
       </div>
     </div>
-
+    <em><a href="{{route('orders.printToPdf',$order_id)}}" style="margin:20px 0px 20px 0px; float:left;">Exportar a PDF</a></em>
 
 
 

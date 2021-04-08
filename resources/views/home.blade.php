@@ -2,9 +2,14 @@
 <head>
   <link href="{{ asset('css/style_home.css') }}" rel="stylesheet" media="screen">
 </head>
-@section('content')
 
-    <img src="/images/portada_boix_temporal.jpg" id="portada" alt="Portada"></img>
+@section('content')
+    @isset($success)
+      <div class="alert alert-success">
+          {{ $success }}
+      </div>
+    @endisset
+    <img src="/images/portada1.jpg" id="portada" alt="Portada"></img>
     <div class="container">
       <div>
         <div class="flex-grid-2">

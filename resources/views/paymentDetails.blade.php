@@ -6,7 +6,7 @@
   @else
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style_payment_mobile.css') }}"/>
   @endif
-  <script src="https://js.stripe.com/v2/"></script>
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 
@@ -19,7 +19,7 @@
   <div class="payment-details">
                         <input id="shoppingCartId" type="text" value="{{$shoppingCartId}}" hidden>
                         <input id="total_price" type="text" value="{{$total_price}}" hidden>
-                        <label style="margin-left:15%;">Datos de envio</label>
+                        <label id="datos-envio-label">Datos de envio</label>
                         <div id="form-send-data">
                         <div class="form-group">
                           <div>
@@ -84,47 +84,36 @@
 
                         </div>
                       </div>
-                      <label style="margin-left:15%;">Datos de pago</label>
-                      <div id="form-payment-data">
-                        <div class="form-group">
-                          <div>
-                          <label for="ccn" class="form-control">Numero de tarjeta:</label>
-                          </div>
-                          <div>
-                          <input id="ccn" class="form-control-ccn" type="text" maxlength="19" placeholder="xxxxxxxxxxxxxxxx" required>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <div>
-                          <label for="expiry_month" class="form-control">{{ __('Mes de caducidad') }}</label>
-                          </div>
-                          <div>
-                          <input id="expiry_month" class="form-control-expiry-month" type="text" required>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <div>
-                          <label for="expiry_year" class="form-control">{{ __('Año de caducidad') }}</label>
-                          </div>
-                          <div>
-                          <input id="expiry_year" class="form-control-expiry-year" type="text" required>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <div>
-                          <label for="cvc" class="form-control">{{ __('CVC') }}</label>
-                          </div>
-                          <div>
-                          <input id="cvc" class="form-control-cvc" type="text" required>
-                          </div>
-                        </div>
+
+                      <label id="datos-pago-label">Datos de pago</label>
+                      <div id="forma-de-pago">
+                        <strong><input id="em-pago-online" name="forma-de-pago" value="pago-online" type="radio"><label for="em-pago-online">Pago Online</label></strong>
+                        <strong><input id="em-pago-rembolso" name="forma-de-pago" value="rembolso" type="radio"><label for="em-pago-rembolso">Pagar contra rembolso</label></strong>
+                      </div>
+                      <div id="info-contra-rembolso" hidden>
+                        El pedido llegará a su direccion en un plazo de entre 5 y 7 dias
+                      </div>
+                      <div id="form-payment-data" hidden>
+
+                      <label for="card-element">
+                        Tarjeta de credito o debito
+                      </label>
+                      <div id="card-element" style="margin-top:10px;">
+                        <!-- a Stripe Element will be inserted here. -->
+                      </div>
+
+                      <!-- Used to display form errors -->
+                      <div id="card-errors" role="alert"></div>
+                      </div>
+                      <label id="politica-privacidad-label">Politica de privacidad</label>
+                      <div id="form-politica-privacidad">
+                        <strong><input id="politica-checkbox" name="politica-checkbox" type="checkbox"><label for="politica-checkbox">Aceptar politica de privacidad</label></strong>
                       </div>
                       <em><button id="btn-submit" class="btn-submit">
                                     Pagar ( {{$total_price}} € )
                       </button></em>
 
   <script src="{{ asset('js/client.js') }}" type="text/javascript"></script>
-
   </div>
 </div>
 @endsection

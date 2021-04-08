@@ -20,7 +20,7 @@ class LinksController extends Controller
   }
 
   public function newLink() {
-      if (Auth::user()->admin==true){
+      if (Auth::check() && Auth::user()->admin==true){
       $newlink = Request::get('newlink', '');
       $artist_id = Request::get('artist_id', 0);
       //  Store data in database

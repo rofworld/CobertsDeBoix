@@ -7,7 +7,11 @@
 @section('content')
 
 <div class="container">
-
+  @if(session()->has('success'))
+    <div class="alert alert-success">
+        {{ session()->get('success') }}
+    </div>
+  @endif
         <div class="table">
        @foreach ($shoppingCartLines as $line)
 
@@ -33,7 +37,7 @@
     </div>
     <hr>
     <div>
-
+      <em><a id="deleteButton" title="Borrar Carrito" href="{{ url('/delete_shopping_cart/'.$line->shopping_cart_id)}}">Borrar Carrito</a></em>
   		<em><a id="checkoutButton" title="Checkout Button" href="{{ url('/checkout/'.$line->shopping_cart_id)}}">Comprar ({{ $subtotal_price + env('GASTOS_ENVIO') }} €)</a></em>
 
     </div>

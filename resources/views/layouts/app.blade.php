@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Lemon Hill') }}</title>
+    <title>{{ config('app.name', 'Utils Boix') }}</title>
 
     <!-- Scripts -->
     <!--
@@ -107,6 +107,9 @@
     </div>
     <div class="footer_label">
       <label>Basada en Barcelona CSS y Laravel</label>
+    </div>
+    <div class="footer-notes">
+      <label>Tel 000000000</label><label style="margin-left:20px;">utilsboix@gmail.com</label><a style="color:var(--color-white); margin-left:20px;">Nota Legal</a><a style="color:var(--color-white); margin-left:20px;">Condiciones de compra</a>
     </div>
 
 </footer>

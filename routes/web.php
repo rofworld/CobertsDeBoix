@@ -56,9 +56,13 @@ Route::post('/shoppingCart/delete',[App\Http\Controllers\shoppingCartController:
 
 
 Route::get('/checkout/{id}',[App\Http\Controllers\PaymentController::class,'paymentDetails'] );
+Route::get('/delete_shopping_cart/{id}',[App\Http\Controllers\PaymentController::class,'deleteShoppingCart'] );
 Route::post('/checkout/pay',[App\Http\Controllers\PaymentController::class,'pay'] );
-
+Route::post('/checkout/confirmPay',[App\Http\Controllers\PaymentController::class,'confirmPay'] );
+Route::post('/checkout/cashOnDelivery',[App\Http\Controllers\PaymentController::class,'cashOnDelivery'] );
 
 Route::get('/list_orders',[App\Http\Controllers\OrderController::class,'list'] );
-Route::post('/list_orders/markAsSent',[App\Http\Controllers\OrderController::class,'markAsSent'] );
+Route::post('/list_orders/markAsComplete',[App\Http\Controllers\OrderController::class,'markAsComplete'] );
+Route::post('/list_orders/markAsRefused',[App\Http\Controllers\OrderController::class,'markAsRefused'] );
 Route::get('/orders/view/{id}',[App\Http\Controllers\OrderController::class,'viewOrder'] );
+Route::get('/orders/printToPdf/{id}',[App\Http\Controllers\OrderController::class,'printToPdf'])->name('orders.printToPdf');
